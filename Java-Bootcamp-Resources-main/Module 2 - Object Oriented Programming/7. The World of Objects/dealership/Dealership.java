@@ -1,24 +1,24 @@
 public class Dealership {
-    private Car[] cars;
+    private Car1[] car1s;
 
-    public Dealership(Car[] cars) {
-        this.cars = new Car[cars.length];
-        for (int i = 0; i < cars.length; i++) {
-            this.cars[i] = new Car(cars[i]);
+    public Dealership(Car1[] car1s) {
+        this.car1s = new Car1[car1s.length];
+        for (int i = 0; i < car1s.length; i++) {
+            this.car1s[i] = new Car1(car1s[i]);
         }
     }
 
-    public void setCar(Car car, int index) {
-        this.cars[index] = new Car(car);
+    public void setCar(Car1 car1, int index) {
+        this.car1s[index] = new Car1(car1);
     }
 
-    public Car getCar(int index) {
-        return new Car(this.cars[index]);
+    public Car1 getCar(int index) {
+        return new Car1(this.car1s[index]);
     }
 
     public void sell(int index) {
-        this.cars[index].drive();
-        this.cars[index] = null;
+        this.car1s[index].drive();
+        this.car1s[index] = null;
     }
 
     /** Task 2 - Re-write the search action.
@@ -40,11 +40,11 @@ public class Dealership {
      *     • returns 404
      */
     public String search(String make, int budget) {
-        for (int i = 0; i < this.cars.length; i++) {
-            if (this.cars[i] == null) {
+        for (int i = 0; i < this.car1s.length; i++) {
+            if (this.car1s[i] == null) {
                 continue;
-            } else if (this.cars[i].getMake().equals(make) && this.cars[i].getPrice() <= budget) {
-                return "\nWe found one in spot " + i + "\n" + this.cars[i].toString() + "\nAre you interested ?";
+            } else if (this.car1s[i].getMake().equals(make) && this.car1s[i].getPrice() <= budget) {
+                return "\nWe found one in spot " + i + "\n" + this.car1s[i].toString() + "\nAre you interested ?";
             }
         }
         return "Sorry, we couldn't find any cars.";
@@ -52,12 +52,12 @@ public class Dealership {
 
     public String toString() {
         String temp = "";
-        for (int i = 0; i < this.cars.length; i++) {
+        for (int i = 0; i < this.car1s.length; i++) {
             temp += "Parking Spot: " + i + "\n";
-            if (this.cars[i] == null) {
+            if (this.car1s[i] == null) {
                 temp += "Empty\n";
             } else {
-                temp += this.cars[i].toString() + "\n";
+                temp += this.car1s[i].toString() + "\n";
             }
         }
         return temp;

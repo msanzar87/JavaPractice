@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-import models.Item;
-import models.Machine;
+import models.Item1;
+import models.Machine1;
 
-public class Main {
+public class Naim3 {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
@@ -12,15 +12,15 @@ public class Main {
         System.out.println("\t             WELCOME TO JAVA DRINKS!            ");
         System.out.println("\t************************************************");
 
-        Item[][] items = new Item[][] {
-            { new Item("Pepsi", 1.99, 3) , new Item("Fresca", 1.49, 3), new Item("Brisk", 2.49, 2) },
-            { new Item("Fanta", 1.99, 2) , new Item("Barq's", 1.49, 2), new Item("A & W", 2.49, 3) },
-            { new Item("Crush", 1.99, 2) , new Item("C-Cola", 1.49, 2), new Item("Berry", 2.49, 1) }
+        Item1[][] item1s = new Item1[][] {
+            { new Item1("Pepsi", 1.99, 3) , new Item1("Fresca", 1.49, 3), new Item1("Brisk", 2.49, 2) },
+            { new Item1("Fanta", 1.99, 2) , new Item1("Barq's", 1.49, 2), new Item1("A & W", 2.49, 3) },
+            { new Item1("Crush", 1.99, 2) , new Item1("C-Cola", 1.49, 2), new Item1("Berry", 2.49, 1) }
           };         
 
-        Machine machine = new Machine(items);
+        Machine1 machine1 = new Machine1(item1s);
 
-        System.out.println(machine);
+        System.out.println(machine1);
 
         while (true) {
             System.out.print("Pick a row: ");
@@ -33,17 +33,17 @@ public class Main {
             if (row == 404 || spot == 404) {
                 System.out.println("INVALID INPUT");
                 continue;
-            } else if (row < 0 || row > machine.getLength() - 1 || spot < 0 || spot > machine.getRowLength() -1) {
+            } else if (row < 0 || row > machine1.getLength() - 1 || spot < 0 || spot > machine1.getRowLength() -1) {
                 System.out.println("INVALID INDEX");
                 continue;
-            } else if (machine.getItem(row, spot).getQuantity() == 0) {
+            } else if (machine1.getItem(row, spot).getQuantity() == 0) {
                 System.out.println("EMPTY SLOT");
                 continue;
             }
 
 
-            machine.dispense(row, spot);
-            System.out.println("\n" + machine);
+            machine1.dispense(row, spot);
+            System.out.println("\n" + machine1);
             System.out.print("\nEnjoy your drink! Press 1 to purchase another: ");
             if (!scan.next().equalsIgnoreCase("1")) {
                 break;

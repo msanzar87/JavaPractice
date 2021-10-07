@@ -1,4 +1,4 @@
-public class Main {
+public class Naim3 {
 
     static final double TARGET = 0.5;
     static final double PRECISION = 0.000000001;

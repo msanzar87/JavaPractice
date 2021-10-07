@@ -1,7 +1,7 @@
 package src.main;
 import src.main.models.Game;
 
-public class Main {
+public class Naim3 {
 
     static Game game;
 

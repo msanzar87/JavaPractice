@@ -6,7 +6,7 @@ import java.util.Scanner;
 import models.Contact;
 import models.ContactManager;
 
-public class Main {
+public class Naim3 {
 
     static ContactManager manager = new ContactManager();
     public static void main(String[] args) {

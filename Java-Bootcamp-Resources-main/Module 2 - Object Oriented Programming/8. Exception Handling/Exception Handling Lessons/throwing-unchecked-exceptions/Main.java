@@ -1,4 +1,4 @@
-public class Main {
+public class Naim3 {
     public static void main(String[] args) {
         Employee stocker = new Employee("   ", null);
         Employee assisManager = new Employee("Nicholas", "     ");

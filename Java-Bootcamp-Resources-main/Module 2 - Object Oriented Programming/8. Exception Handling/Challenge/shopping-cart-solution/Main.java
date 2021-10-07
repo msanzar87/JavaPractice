@@ -3,10 +3,10 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import models.Cart;
-import models.Item;
+import models.Item1;
 import models.Store;
 
-public class Main {
+public class Naim3 {
 
     static Store store = new Store();
     static Cart cart = new Cart();
@@ -26,8 +26,8 @@ public class Main {
      *   • 1. Starts a new instance of Scanner;
      *   • 2. Creates an infinite loop:     
      *   •        The user can choose to a) add or b) remove c) checkout.
-     *   •          case a: asks for the aisle and item number. Then, adds item to cart.
-     *   •          case b: asks for the name. Then, removes item from cart.
+     *   •          case a: asks for the aisle and item1 number. Then, adds item1 to cart.
+     *   •          case b: asks for the name. Then, removes item1 from cart.
      *   •          case c: prints the receipt and closes Scanner.
      *   •        Prints the updated shopping cart.
      */
@@ -46,7 +46,7 @@ public class Main {
                   System.out.print("\nChoose an aisle number between: 1 – 7: ");
                   int row = scan.hasNextInt() ? scan.nextInt() - 1 : 404;
                   scan.nextLine();
-                  System.out.print("Choose an item number between: 1 – 3: ");
+                  System.out.print("Choose an item1 number between: 1 – 3: ");
                   int column = scan.hasNextInt() ? scan.nextInt() - 1 : 404;
                   scan.nextLine();
                   if (row == 404 || column == 404) {
@@ -54,18 +54,18 @@ public class Main {
                   } else if (row < 0 || row > 6 || column < 0 || column > 2) {
                       continue;
                   }
-                  Item item = store.getItem(row, column);
-                  if (!(cart.add(item))) {
-                      System.out.println(item.getName() + " is already in your shopping cart.");
+                  Item1 item1 = store.getItem(row, column);
+                  if (!(cart.add(item1))) {
+                      System.out.println(item1.getName() + " is already in your shopping cart.");
                   } else {
-                      System.out.println(item.getName() + " was added to your shopping cart.");
+                      System.out.println(item1.getName() + " was added to your shopping cart.");
                   }
                   break;
                 case "b":
                   if (cart.isEmpty()) {
                       continue;
                   }
-                  System.out.print("Enter the item you'd like to remove: ");
+                  System.out.print("Enter the item1 you'd like to remove: ");
                   cart.remove(scan.nextLine());
                   break;
                 case "c":
@@ -93,13 +93,13 @@ public class Main {
     * @throws FileNotFoundException
     *
     * Inside the function:
-    *   1. loads items from <fileName>.txt.
+    *   1. loads item1s from <fileName>.txt.
     *      • while loop runs through every line in <fileName>
     *      • scan.nextLine() picks up the entire line.
     *      • splits each String using the ";" separator.
     *      • splits both fields in each String using the "=" separator.
     *      • Parse each price into a Double.
-    *   2. adds all items to the store object's items field.
+    *   2. adds all item1s to the store object's item1s field.
     */
 
     public static void loadItems(String fileName) throws FileNotFoundException {
@@ -107,10 +107,10 @@ public class Main {
         Scanner scanFile = new Scanner(fis);
         for (int i = 0; scanFile.hasNextLine(); i++) {
             String line = scanFile.nextLine();
-            String[] items = line.split(";");
-            for (int j = 0; j < items.length; j++) {
-                String[] fields = items[j].split("=");
-                store.setItem(i, j, new Item(fields[0], Double.parseDouble(fields[1])));
+            String[] item1s = line.split(";");
+            for (int j = 0; j < item1s.length; j++) {
+                String[] fields = item1s[j].split("=");
+                store.setItem(i, j, new Item1(fields[0], Double.parseDouble(fields[1])));
             }
         }
         scanFile.close();

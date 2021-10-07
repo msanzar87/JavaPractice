@@ -1,4 +1,4 @@
-public class Main {
+public class Naim3 {
     
     static int counter = 0;
     

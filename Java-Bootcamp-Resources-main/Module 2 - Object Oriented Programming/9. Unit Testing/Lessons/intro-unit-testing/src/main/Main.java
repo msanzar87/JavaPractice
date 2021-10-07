@@ -1,6 +1,6 @@
 package src.main;
 
-public class Main {
+public class Naim3 {
     
     static double[] prices = new double[] {2.23, 1.32, 4.32, 11.33};
 

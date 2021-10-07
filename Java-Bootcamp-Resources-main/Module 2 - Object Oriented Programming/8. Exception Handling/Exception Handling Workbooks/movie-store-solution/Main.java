@@ -5,7 +5,7 @@ import java.util.Scanner;
 import models.Movie;
 import models.Store;
 
-public class Main {
+public class Naim3 {
     
 
     static Store store = new Store();

@@ -1,4 +1,4 @@
-public class Main {
+public class Naim3 {
     public static void main(String[] args) {
         // longTask();
         System.out.println("Doing other work on main thread");

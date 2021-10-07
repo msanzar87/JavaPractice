@@ -3,7 +3,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 
-public class Main {
+public class Naim3 {
 
     static final String SALES = "data/sales.csv"; //Use backslash Windows users
 

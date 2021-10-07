@@ -1,4 +1,4 @@
-public class Main {
+public class Naim3 {
   
     static final String FILE_NAME = "products.txt";
 

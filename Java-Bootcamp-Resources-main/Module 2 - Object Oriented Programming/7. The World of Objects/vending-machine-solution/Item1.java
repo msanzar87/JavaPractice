@@ -1,14 +1,14 @@
-public class Item {
+public class Item1 {
     private String name;
     private double price;
     private int quantity;
 
-    public Item(String name, double price, int quantity) {
+    public Item1(String name, double price, int quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;   
     }
-    public Item(Item source) {
+    public Item1(Item1 source) {
         this.name = source.name;
         this.price = source.price;
         this.quantity = source.quantity;

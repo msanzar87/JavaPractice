@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 import src.main.models.Game;
 import src.main.models.Team;
 
-public class Main {
+public class Naim3 {
 
     static Game game;
     static final String TEAMS_FILE = "src/main/teams.txt";

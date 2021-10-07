@@ -1,13 +1,13 @@
-The Shopping Cart lets users add, remove, and check items out.
-They can add an item that wasn't already added.
+The Shopping Cart lets users add, remove, and check item1s out.
+They can add an item1 that wasn't already added.
 The checkout process returns a receipt that holds the subtotal, tax, and total.
 
                Test Cases
 ----------------------------------------
-- adding an item if not already added
+- adding an item1 if not already added
     - `[identify test case 1]`
     - `[identify test case 2]`
-- removing an item
+- removing an item1
     - `[identify test case 3]`
     - `[identify state exception test case]`
 - checkout

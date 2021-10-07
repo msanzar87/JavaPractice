@@ -1,13 +1,13 @@
 import java.util.Arrays;
 
-public class Car {
+public class Car1 {
     private String make;
     private double price;
     private int year;
     private String color;
     private String[] parts;
 
-    public Car(String make, double price, int year, String color, String[] parts) {
+    public Car1(String make, double price, int year, String color, String[] parts) {
         this.make = make;
         this.price = price;
         this.year = year;
@@ -15,7 +15,7 @@ public class Car {
         this.parts = Arrays.copyOf(parts, parts.length);
     }
 
-    public Car(Car source) {
+    public Car1(Car1 source) {
         this.make = source.make;
         this.price = source.price;
         this.year = source.year;

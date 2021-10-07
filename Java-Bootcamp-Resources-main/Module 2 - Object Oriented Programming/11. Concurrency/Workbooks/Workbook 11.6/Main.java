@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Naim3 {
  
     static String[] files = new String[] { "data/sales1.csv", "data/sales2.csv", "data/sales3.csv"};
    
