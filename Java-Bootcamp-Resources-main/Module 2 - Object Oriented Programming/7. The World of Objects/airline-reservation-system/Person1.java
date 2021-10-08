@@ -3,6 +3,18 @@ public class Person1 {
     private String nationality;
     private String dateOfBirth;
     private int seatNumber;
+    private String[] passport;
+
+    public static boolean applyPassport(){
+        int number = (int) (Math.random()*2);
+        if (number == 0){
+            return false;
+        }
+        return true;
+    }
+    public void chooseSeat(){
+        this.seatNumber = (int) (Math.random()*11 + 1);
+    }
 
 
     public Person1(){}
@@ -10,7 +22,7 @@ public class Person1 {
         this.name = name;
         this.nationality = nationality;
         this.dateOfBirth = dateOfBirth;
-        this.seatNumber = seatNumber;
+        this.seatNumber;
     }
     public Person1(Person1 source){
         this.name = source.name;
