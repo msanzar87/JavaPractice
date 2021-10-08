@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Person1 {
     private String name;
     private String nationality;
@@ -5,30 +7,23 @@ public class Person1 {
     private int seatNumber;
     private String[] passport;
 
-    public static boolean applyPassport(){
-        int number = (int) (Math.random()*2);
-        if (number == 0){
-            return false;
-        }
-        return true;
-    }
-    public void chooseSeat(){
-        this.seatNumber = (int) (Math.random()*11 + 1);
-    }
+
 
 
     public Person1(){}
-    public Person1(String name, String nationality, String dateOfBirth, int seatNumber) {
+    public Person1(String name, String nationality, String dateOfBirth, int seatNumber, String[] passport) {
         this.name = name;
         this.nationality = nationality;
         this.dateOfBirth = dateOfBirth;
-        this.seatNumber;
+        this.seatNumber = seatNumber;
+        this.passport = Arrays.copyOf(passport,passport.length);
     }
     public Person1(Person1 source){
         this.name = source.name;
         this.nationality = source.nationality;
         this.dateOfBirth = source.dateOfBirth;
         this.seatNumber = source.seatNumber;
+        this.passport = Arrays.copyOf(source.passport,source.passport.length);
     }
 
     public String getName() {
@@ -61,6 +56,26 @@ public class Person1 {
 
     public void setSeatNumber(int seatNumber) {
         this.seatNumber = seatNumber;
+    }
+
+    public String[] getPassport() {
+        return Arrays.copyOf(this.passport,passport.length);
+    }
+
+    public void setPassport() {
+        this.passport = new String[] {this.name, this.nationality, this.dateOfBirth};
+    }
+
+    public boolean applyPassport() {
+        int number = (int) (Math.random() * 2);  //random int that can be 0 or 1.
+        if (number == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    public void chooseSeat(){
+        this.seatNumber = (int) (Math.random()*11 + 1);
     }
 }
 
