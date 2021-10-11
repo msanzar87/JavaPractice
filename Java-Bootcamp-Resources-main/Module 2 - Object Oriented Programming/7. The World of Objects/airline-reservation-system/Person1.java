@@ -7,9 +7,6 @@ public class Person1 {
     private int seatNumber;
     private String[] passport;
 
-
-
-
     public Person1(){}
     public Person1(String name, String nationality, String dateOfBirth, int seatNumber, String[] passport) {
         this.name = name;

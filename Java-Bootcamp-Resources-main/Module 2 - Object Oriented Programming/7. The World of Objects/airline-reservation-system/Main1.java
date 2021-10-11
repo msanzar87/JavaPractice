@@ -1,18 +1,25 @@
 public class Main1 {
     public static void main(String[] args) {
-        String[] passport = new String[3];
-        Person1[] seats = new Person1[]{
-                new Person1("Munir", "USA", "01/11/1111", 4,passport ),
-                new Person1("Buzz","UK","2/22/22",2,passport),
-                new Person1("Christian","Canada","3/3/33",7,passport),
-
+        Person[] people = new Person[]{new Person("Cleopatra", "Egypt", "69 BC", 1),
+                new Person("Alexander the Great", "Macedon", "356 BC", 2),
+                new Person("Julius Caesar", "Rome", "100 BC", 3),
+                new Person("Hannibal", "Carthage", "247 BC", 4),
+                new Person("Confucius", "China", "551 BC", 5),
+                new Person("Pericles", "Greece", "429 BC", 6),
+                new Person("Spartacus", "Thrace", "111 BC", 7),
+                new Person("Marcus Aurelius", "Rome", "121 AD", 8),
+                new Person("Leonidas", "Greece", "540 BC", 9),
+                new Person("Sun Tzu", "China", "544 BC", 10),
+                new Person("Hammurabi", "Babylon", "1750 BC", 11),
         };
-        Airline1 airline1 = new Airline1();
-        for (int i = 0; i < seats.length; i++) {
-            airline1.setSeats(seats[i],i);
+
+        Airline airline = new Airline();
+        for (int i = 0; i < people.length-1; i++) {
+            airline.setPerson(people[i]);
         }
-        Person1 newSeat = airline1.getSeats(0);
-        newSeat.setNationality("Russia");
-        System.out.println(newSeat);
+        System.out.println(airline.getPerson1(1));
+        System.out.println(airline.getPerson(5));
+        System.out.println(airline.getPerson(10));
+
     }
 }
