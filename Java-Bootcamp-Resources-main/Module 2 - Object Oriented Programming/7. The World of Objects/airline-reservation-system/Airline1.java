@@ -1,7 +1,7 @@
 
 
 public class Airline1 {
-private Person1[] seats;
+Person1[] seats;
 
 
 public Airline1(){
@@ -14,6 +14,13 @@ public Person1 getPerson1(int index){
 
     public void setPerson1(Person1 person1) {
     this.seats[person1.getSeatNumber()-1] = new Person1(person1);
-
     }
+    public static void createReservation(Person1 person1){
+        for (int i = 0; i < ; i++) {
+            
+        }
+    }
+
+
 }
+

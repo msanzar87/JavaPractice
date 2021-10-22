@@ -13,13 +13,13 @@ public class Main1 {
                 new Person("Hammurabi", "Babylon", "1750 BC", 11),
         };
 
-        Airline airline = new Airline();
+        Airline1 airline = new Airline1();
         for (int i = 0; i < people.length-1; i++) {
-            airline.setPerson(people[i]);
+            airline.setPerson1(people[i],i);
         }
         System.out.println(airline.getPerson1(1));
-        System.out.println(airline.getPerson(5));
-        System.out.println(airline.getPerson(10));
+        System.out.println(airline.getPerson1(5));
+        System.out.println(airline.getPerson1(10));
 
     }
 }

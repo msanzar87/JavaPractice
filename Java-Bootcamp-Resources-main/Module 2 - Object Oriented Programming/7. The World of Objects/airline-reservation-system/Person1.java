@@ -7,13 +7,12 @@ public class Person1 {
     private int seatNumber;
     private String[] passport;
 
-    public Person1(){}
     public Person1(String name, String nationality, String dateOfBirth, int seatNumber, String[] passport) {
         this.name = name;
         this.nationality = nationality;
         this.dateOfBirth = dateOfBirth;
         this.seatNumber = seatNumber;
-        this.passport = Arrays.copyOf(passport,passport.length);
+        this.passport = new String[3];
     }
     public Person1(Person1 source){
         this.name = source.name;
@@ -24,7 +23,7 @@ public class Person1 {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -32,7 +31,7 @@ public class Person1 {
     }
 
     public String getNationality() {
-        return nationality;
+        return this.nationality;
     }
 
     public void setNationality(String nationality) {
@@ -40,7 +39,7 @@ public class Person1 {
     }
 
     public String getDateOfBirth() {
-        return dateOfBirth;
+        return this.dateOfBirth;
     }
 
     public void setDateOfBirth(String dateOfBirth) {
@@ -48,7 +47,7 @@ public class Person1 {
     }
 
     public int getSeatNumber() {
-        return seatNumber;
+        return this.seatNumber;
     }
 
     public void setSeatNumber(int seatNumber) {
@@ -80,7 +79,7 @@ public class Person1 {
                + "Nationality: "+this.nationality + ". \n"
                 +"DOB: "+this.dateOfBirth + ". \n"
                 +"Seat Number: "+this.seatNumber + ". \n"
-                +"Passport: "+Arrays.toString(passport) + ". \n";
+                +"Passport: "+Arrays.toString(this.passport) + ". \n";
 
     }
 }
