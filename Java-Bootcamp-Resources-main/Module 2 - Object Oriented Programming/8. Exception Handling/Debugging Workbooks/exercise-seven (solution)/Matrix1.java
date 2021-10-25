@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Matrix {
+public class Matrix1 {
     public static void main(String[] args) {
         int[][] matrix = { //matrix means 2d array
              {0, 0, 0},

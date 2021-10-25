@@ -1,4 +1,4 @@
-public class TicTacToe {
+public class TicTacToe2 {
     public static void main(String[] args) {
         char[][] array = {
             {'_', '_', '_'},

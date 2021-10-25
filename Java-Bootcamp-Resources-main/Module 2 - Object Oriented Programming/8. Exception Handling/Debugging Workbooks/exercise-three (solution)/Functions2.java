@@ -1,4 +1,4 @@
-public class Functions {
+public class Functions2 {
     public static void main(String[] args) {
         int random = random(15);    
         System.out.println("Number: " + random);

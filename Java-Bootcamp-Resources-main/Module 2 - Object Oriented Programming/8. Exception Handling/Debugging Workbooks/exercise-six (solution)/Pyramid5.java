@@ -1,4 +1,4 @@
-public class Pyramid {
+public class Pyramid5 {
 
     public static void main(String[] args) {
         int rows = 5;
