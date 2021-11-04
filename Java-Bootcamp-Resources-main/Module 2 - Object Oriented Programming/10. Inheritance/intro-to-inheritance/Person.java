@@ -31,19 +31,19 @@ public class Person {
         this.age = age;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null){
-            return false;
-        }
-        if (!(obj instanceof Person)){
-            return false;
-        }
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (obj == null){
+//            return false;
+//        }
+//        if (!(obj instanceof Person)){
+//            return false;
+//        }
+//
+//        Person person = (Person)obj;
 
-        Person person = (Person)obj;
-
-        return this.age == person.getAge() && this.name.equals(person.getName());
-    }
+//        return this.age == person.getAge() && this.name.equals(person.getName());
+//    }
 
     @Override
     public int hashCode() {

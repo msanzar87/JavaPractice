@@ -1,15 +1,10 @@
 package models;
 
-public class Shirt{
+public class Shirt extends Product{
     private String size;
-    private String color;
-    private double price;
-    private String brand;
 
     public Shirt(String size, double price, String color, String brand){
+        super(price, color, brand);
         this.size = size;
-        this.price = price;
-        this.color = color;
-        this.brand = brand;
     }
 }

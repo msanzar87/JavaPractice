@@ -1,15 +1,11 @@
 package models;
 
-public class Pants{
-    private String waist;
-    private String color;
-    private double price;
-    private String brand;
+public class Pants extends Product {
+    private int waist;
 
-    public Pants(String waist, double price, String color, String brand){
+
+    public Pants(int waist, double price, String color, String brand) {
+        super(price, color, brand);
         this.waist = waist;
-        this.price = price;
-        this.color = color;
-        this.brand = brand;
     }
 }
