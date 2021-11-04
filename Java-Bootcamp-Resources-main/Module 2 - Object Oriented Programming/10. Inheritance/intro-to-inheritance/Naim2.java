@@ -1,4 +1,4 @@
-public class Naim3 {
+public class Naim2 {
     public static void main(String[] args) {
 
         
