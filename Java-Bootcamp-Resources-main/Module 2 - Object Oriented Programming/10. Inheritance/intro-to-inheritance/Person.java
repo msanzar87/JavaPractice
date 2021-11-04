@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Person {
   
     private String name;
@@ -13,4 +15,43 @@ public class Person {
         this.age = source.age;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null){
+            return false;
+        }
+        if (!(obj instanceof Person)){
+            return false;
+        }
+
+        Person person = (Person)obj;
+
+        return this.age == person.getAge() && this.name.equals(person.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.age, this.name);
+    }
+
+    @Override
+    public String toString() {
+        return "age: " + this.age + "name" + this.name;
+    }
 }
