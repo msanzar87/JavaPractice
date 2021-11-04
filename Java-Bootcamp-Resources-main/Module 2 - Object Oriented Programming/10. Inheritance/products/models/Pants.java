@@ -8,4 +8,17 @@ public class Pants extends Product {
         super(price, color, brand);
         this.waist = waist;
     }
+    public Pants(Pants source){
+        super(source);
+        this.waist = source.waist;
+
+    }
+
+    public int getWaist() {
+        return waist;
+    }
+
+    public void setWaist(int waist) {
+        this.waist = waist;
+    }
 }
