@@ -12,6 +12,7 @@ public class Naim0 {
                 shirt.equals(shirt2);
         System.out.println(shirt.hashCode());
         System.out.println(shirt2.hashCode());
+        System.out.println(shirt);
     }
   
     /**
