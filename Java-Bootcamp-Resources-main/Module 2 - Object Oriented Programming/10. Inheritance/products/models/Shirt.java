@@ -3,9 +3,12 @@ package models;
 import java.util.Objects;
 
 public class Shirt extends Product{
-    private String size;
+   public enum Size {
+       SMALL, MEDIUM, LARGE
+   }
+    private Size size;
 
-    public Shirt(String size, double price, String color, String brand){
+    public Shirt(Size size, double price, String color, String brand){
         super(price, color, brand);
         this.size = size;
     }
@@ -14,11 +17,12 @@ public class Shirt extends Product{
         super(source);
         this.size = source.size;
     }
-    public String getSize() {
+
+    public Size getSize() {
         return size;
     }
 
-    public void setSize(String size) {
+    public void setSize(Size size) {
         this.size = size;
     }
 
@@ -49,5 +53,12 @@ public class Shirt extends Product{
                 "brand=" + super.getBrand() + " " +
                 "color=" + super.getColor() + " " +
                 '}';
+    }
+    @Override
+    public void fold(){
+        System.out.println("Lay shirt on a flat surface.");
+        System.out.println("Fold the shirt sideways.");
+        System.out.println("Bring the sleeves in.");
+        System.out.println("Fold from the bottom up");
     }
 }

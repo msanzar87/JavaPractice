@@ -52,4 +52,10 @@ public class Pants extends Product {
                 "color=" + super.getColor() + " " +
                 '}';
     }
+    @Override
+    public void fold(){
+        System.out.println("Hold pants upright.");
+        System.out.println("Fold one leg over the other.");
+        System.out.println("Fold pants from the bottom in thirds.");
+    }
 }

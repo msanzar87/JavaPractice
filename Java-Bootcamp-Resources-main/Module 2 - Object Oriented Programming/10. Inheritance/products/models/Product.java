@@ -39,4 +39,6 @@ public abstract class Product {
     public void setBrand(String brand) {
         this.brand = brand;
     }
+    public abstract void fold();
+
 }
