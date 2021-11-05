@@ -2,7 +2,7 @@ package models;
 
 import java.util.Objects;
 
-public class Pants extends Product {
+public class Pants extends Product implements Discountable, Comparable<Pants> {
     private int waist;
 
 
@@ -25,6 +25,10 @@ public class Pants extends Product {
     }
 
     @Override
+    public void discount(){
+        super.setPrice(super.getPrice() / 2);
+    }
+    @Override
     public boolean equals(Object o) {
         if (o == this) return true;
         if (!(o instanceof Pants)) {
@@ -41,6 +45,11 @@ public class Pants extends Product {
     @Override
     public int hashCode() {
         return Objects.hash(waist, super.getPrice(), super.getBrand(), super.getColor());
+    }
+
+    @Override
+    public int compareTo(Pants specifiedObject) {
+        return (int) Math.round(super.getPrice() - specifiedObject.getPrice());
     }
 
     @Override
